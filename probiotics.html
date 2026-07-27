@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probiotics for the Whole Family | Naturally With Harley</title>
+  <meta name="description" content="My favorite probiotics for women, men, and kids. Real picks that actually work — for gut health, energy, immunity, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#D8E8C8;--beige:#BAD4A0;
+      --terra:#14420A;--terra-dark:#0A2904;
+      --brown:#060E03;--brown-mid:#162810;
+      --brown-light:#B8782A;
+      --white:#EAF2E2;
+      --yellow:#F5C518;--yellow-dark:#D4A800;
+      --shadow:rgba(24,46,12,.14)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:var(--brown);line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+
+    nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px solid var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;box-shadow:0 2px 12px var(--shadow)}
+    .nav-logo{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--terra);border-bottom:2.5px solid var(--yellow);padding-bottom:2px}
+    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);transition:color .2s}
+    .nav-back:hover{color:var(--terra)}
+
+    .page-hero{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:5rem 2rem 4rem}
+    .page-hero .eyebrow{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--yellow-dark);margin-bottom:.5rem}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;max-width:700px;margin:0 auto 1rem}
+    .page-hero p{max-width:580px;margin:0 auto;opacity:.85;font-size:1.05rem}
+    .page-hero .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1.25rem auto 0}
+
+    .intro-strip{position:relative;z-index:1;background:var(--white);padding:3rem 2rem;text-align:center}
+    .intro-strip p{max-width:680px;margin:0 auto;font-size:1.05rem;color:var(--brown-mid)}
+
+    .cat-section{position:relative;z-index:1;padding:4rem 2rem}
+    .cat-section:nth-child(even){background:var(--white)}
+    .cat-section:nth-child(odd){background:var(--cream)}
+
+    .cat-header{max-width:1100px;margin:0 auto 2rem;display:flex;align-items:center;gap:1.5rem}
+    .cat-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--brown-light);white-space:nowrap;letter-spacing:.02em}
+    .cat-header::after{content:'';flex:1;height:3px;background:var(--yellow);opacity:.9;border-radius:2px}
+
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.75rem;max-width:1100px;margin:0 auto}
+
+    .product-card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
+
+    .product-img{width:100%;padding-bottom:85%;position:relative;overflow:hidden;background:#f9f9f9}
+    .product-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:transform .35s}
+    .product-card:hover .product-img img{transform:scale(1.04)}
+    .product-img .img-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;background:#f9f9f9;z-index:0}
+
+    .product-body{padding:1.25rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
+    .product-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);padding:.2rem .7rem;background:var(--yellow);border-radius:2px;margin-bottom:.5rem}
+    .product-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--brown);margin:.3rem 0 .5rem;line-height:1.35}
+    .product-body p{font-size:.9rem;color:var(--brown-mid);flex:1}
+    .product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1.1rem}
+    .harley-pick{font-family:'Dancing Script',cursive;font-size:.9rem;color:var(--yellow-dark)}
+    .shop-btn{display:inline-block;padding:.5rem 1.1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;transition:background .2s}
+    .shop-btn:hover{background:var(--terra-dark)}
+
+    .tip-banner{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:4rem 2rem}
+    .tip-banner h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1rem}
+    .tip-banner p{max-width:600px;margin:0 auto .5rem;opacity:.85;font-size:1rem}
+    .tip-banner .divider{background:var(--yellow);width:60px;height:3px;border-radius:2px;margin:1.25rem auto 0}
+
+    .tip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;max-width:900px;margin:2.5rem auto 0}
+    .tip-card{background:rgba(255,255,255,.1);border-radius:6px;padding:1.75rem 1.5rem;text-align:left}
+    .tip-card .tip-icon{font-size:1.8rem;margin-bottom:.75rem}
+    .tip-card h4{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:.4rem;color:var(--yellow)}
+    .tip-card p{font-size:.88rem;opacity:.82}
+
+    .back-strip{position:relative;z-index:1;background:var(--cream);padding:2.5rem 2rem;text-align:center}
+    .back-link{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);border-bottom:1.5px solid var(--yellow)}
+    .back-link:hover{color:var(--terra)}
+
+    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2.5rem 2rem;font-size:.85rem}
+    .footer-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+    footer a{color:rgba(255,255,255,.6)}
+    footer a:hover{color:#fff}
+    .footer-disclaimer{max-width:600px;margin:.75rem auto 0;font-size:.74rem;opacity:.5;line-height:1.5}
+  </style>
+</head>
+<body>
+
+  <div id="leaf-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;background:url(images/leaf-bg.jpg) center/cover no-repeat;opacity:1;"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Naturally With Harley</a>
+    <a href="index.html" class="nav-back">&#8592; Homepage</a>
+  </nav>
+
+  <div class="page-hero">
+    <p class="eyebrow">Gut Health for Everyone</p>
+    <h1>Probiotics for the Whole Family</h1>
+    <p>Gut health affects everything — your energy, your mood, your immune system. These are the probiotics I've actually tried and kept buying, for every member of the family.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="intro-strip">
+    <p>I started with a women's probiotic and noticed real changes within a few weeks — better digestion, steadier energy, less bloating. Then I started looking into options for the rest of the family. Below are my picks for women, men, and kids, all available on Amazon.</p>
+  </div>
+
+  <!-- ── WOMEN'S PROBIOTICS ──────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>For Women</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌸</div></div>
+        <div class="product-body">
+          <span class="product-tag">Women's Health</span>
+          <h3>MaryRuth's Women's Probiotic</h3>
+          <p>Family-founded brand with a fully clean lineup. This women's formula supports digestive health and immunity with no fillers, no synthetics, and no compromises. One of my all-time favorites.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Harley's pick ♥</span>
+            <a href="https://www.amazon.com/s?k=maryruth+women+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">💊</div></div>
+        <div class="product-body">
+          <span class="product-tag">Women's Health</span>
+          <h3>Physician's Choice Women's Probiotic</h3>
+          <p>High CFU count, multiple targeted strains, and a prebiotic included. One of the best value options I've found — very effective and very affordable. A great everyday option.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Best value</span>
+            <a href="https://www.amazon.com/s?k=physicians+choice+women+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">💚</div></div>
+        <div class="product-body">
+          <span class="product-tag">Women's Health</span>
+          <h3>Ora Organic Lady Bugs Women's Probiotic</h3>
+          <p>Completely plant-based, certified organic, and made without any fillers or synthetic anything. Gentle enough for sensitive stomachs and effective enough to actually notice. Clean as it gets.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Certified organic</span>
+            <a href="https://www.amazon.com/s?k=ora+organic+women+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌼</div></div>
+        <div class="product-body">
+          <span class="product-tag">Women's Health</span>
+          <h3>Love Wellness Good Girl Probiotics</h3>
+          <p>Made by women, for women. This one targets vaginal and urinary health specifically, in addition to gut support. The strain selection is thoughtful and the results are real.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Full-body support</span>
+            <a href="https://www.amazon.com/s?k=love+wellness+good+girl+probiotics&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── MEN'S PROBIOTICS ────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>For Men</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">💪</div></div>
+        <div class="product-body">
+          <span class="product-tag">Men's Health</span>
+          <h3>Thorne Men's Daily Probiotic</h3>
+          <p>Thorne is an independent, research-driven company that doesn't cut corners. Their men's formula uses clinically studied strains and zero unnecessary fillers. One of the cleanest options on the market.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Research-backed</span>
+            <a href="https://www.amazon.com/s?k=thorne+men+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌱</div></div>
+        <div class="product-body">
+          <span class="product-tag">Men's Health</span>
+          <h3>Physician's Choice Men's Probiotic</h3>
+          <p>High potency, targeted strains for men's digestive health, and a prebiotic built right in. Clean label, great price, and actually works. One of the most consistent options out there.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Best value</span>
+            <a href="https://www.amazon.com/s?k=physicians+choice+men+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🛡️</div></div>
+        <div class="product-body">
+          <span class="product-tag">Men's Health</span>
+          <h3>Ancient Nutrition Men's Probiotic</h3>
+          <p>Ancient Nutrition makes some of the cleanest supplements out there. This men's formula uses SBO (soil-based organism) probiotics that are incredibly resilient and effective. No fillers, no synthetic ingredients.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Clean &amp; powerful</span>
+            <a href="https://www.amazon.com/s?k=ancient+nutrition+men+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🔥</div></div>
+        <div class="product-body">
+          <span class="product-tag">Men's Health</span>
+          <h3>MaryRuth's Men's Probiotic</h3>
+          <p>The same family-founded clean standard — now in a men's formula. High-potency strains, no fillers, vegan and non-GMO. If you want results without mystery ingredients, this is it.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Family-founded</span>
+            <a href="https://www.amazon.com/s?k=maryruth+men+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── KIDS' PROBIOTICS ────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>For Kids</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🧒</div></div>
+        <div class="product-body">
+          <span class="product-tag">Kids</span>
+          <h3>Ora Organic Kids Probiotic</h3>
+          <p>Ora Organic is an independent, founder-led brand that is serious about clean ingredients. Their kids probiotic is certified organic, plant-based, and uses strains actually studied for children. My son's favorite.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Son's daily pick ♥</span>
+            <a href="https://www.amazon.com/s?k=ora+organic+kids+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🍓</div></div>
+        <div class="product-body">
+          <span class="product-tag">Kids</span>
+          <h3>MaryRuth's Kids Probiotic Gummies</h3>
+          <p>MaryRuth's is a family-founded brand built on clean, natural supplements. These gummies are vegan, non-GMO, and free of top allergens. Kids love the taste and parents love the ingredient list.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Family-founded</span>
+            <a href="https://www.amazon.com/s?k=maryruth+kids+probiotic+gummies&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🐻</div></div>
+        <div class="product-body">
+          <span class="product-tag">Kids</span>
+          <h3>MaryRuth's Kids Chewable Probiotic</h3>
+          <p>A chewable option for kids who aren't into gummies. Same clean MaryRuth's standards — no fillers, no synthetic flavors, just what your kid actually needs. Easy to make a daily habit.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Kid-approved</span>
+            <a href="https://www.amazon.com/s?k=maryruth+kids+chewable+probiotic&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🍼</div></div>
+        <div class="product-body">
+          <span class="product-tag">Kids</span>
+          <h3>MaryRuth's Infant Probiotic Drops</h3>
+          <p>Liquid drops safe from birth — all-natural, no fillers, no artificial anything. Helps with gas, colic, and digestive comfort for the tiniest family members. A brand I trust completely.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Baby-safe &amp; natural</span>
+            <a href="https://www.amazon.com/s?k=maryruth+infant+probiotic+drops&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WHAT TO KNOW ────────────────────────────────── -->
+  <div class="tip-banner">
+    <h2>What I Wish I Knew Before Starting</h2>
+    <p>Probiotics aren't all the same — and how you take them matters just as much as which one you pick.</p>
+    <div class="divider"></div>
+    <div class="tip-grid">
+      <div class="tip-card">
+        <div class="tip-icon">📅</div>
+        <h4>Be Consistent</h4>
+        <p>The benefits build over time. Taking a probiotic once in a while does almost nothing. Daily, same time each day, for at least 4–6 weeks before you judge the results.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🍽️</div>
+        <h4>Take With Food</h4>
+        <p>Most probiotics survive better when taken with a meal. Food buffers stomach acid and gives the bacteria a better chance of reaching your gut alive and active.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🔬</div>
+        <h4>Strains Matter</h4>
+        <p>Not all probiotics do the same thing. Look at the specific strains listed, not just the CFU count. Different strains are studied for different outcomes — gut, immunity, mood.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🥗</div>
+        <h4>Feed Your Gut Too</h4>
+        <p>Probiotics work best alongside prebiotic foods — garlic, bananas, oats, onion. The good bacteria need something to feed on. Give them fiber and they thrive.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-strip">
+    <a href="index.html" class="back-link">&#8592; Back to Homepage</a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Naturally With Harley</div>
+    <p>&copy; 2026 Naturally With Harley &middot; <a href="index.html">Home</a></p>
+    <p class="footer-disclaimer">This site contains affiliate links. I may earn a small commission at no extra cost to you when you purchase through my links. I only recommend products I personally use and love.</p>
+  </footer>
+
+</body>
+</html>

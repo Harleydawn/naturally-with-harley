@@ -1,0 +1,705 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoTERRA Must-Haves - Naturally With Harley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#D8E8C8;--beige:#BAD4A0;
+      --terra:#14420A;--terra-dark:#0A2904;
+      --brown:#060E03;--brown-mid:#162810;
+      --brown-light:#B8782A;
+      --white:#EAF2E2;
+      --yellow:#F5C518;--yellow-dark:#D4A800;
+      --shadow:rgba(24,46,12,.14)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:var(--brown);line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    
+    nav{position:relative;z-index:100;background:var(--white);border-bottom:3px solid var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;box-shadow:0 2px 12px var(--shadow)}
+    .nav-logo{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--terra);border-bottom:2.5px solid var(--yellow);padding-bottom:2px}
+    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);transition:color .2s}
+    .nav-back:hover{color:var(--terra)}
+    .page-header{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:4rem 2rem 3rem}
+    .page-header .eyebrow{font-family:'Dancing Script',cursive;font-size:1.2rem;color:var(--yellow);margin-bottom:.5rem}
+    .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);margin-bottom:1rem}
+    .page-header p{max-width:540px;margin:0 auto;opacity:.85;font-size:1.05rem}
+    .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1rem auto 0}
+    .products-section{position:relative;z-index:1;padding:4rem 2rem;max-width:1300px;margin:0 auto}
+    .product-count{text-align:center;font-family:'Dancing Script',cursive;font-size:1.1rem;color:var(--yellow-dark);margin-bottom:2rem}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem}
+    .cat-header{grid-column:1/-1;display:flex;align-items:center;gap:1rem;margin-top:1.5rem}
+    .cat-header h2{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--brown-light);white-space:nowrap}
+    .cat-header::after{content:'';flex:1;height:2px;background:var(--brown-light);opacity:.45;border-radius:2px}
+    .product-card{position:relative;z-index:1;background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.25);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+    .product-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
+    .product-img-link{display:block}
+    .product-img{width:100%;padding-bottom:100%;position:relative;overflow:hidden;background:#fff}
+    .product-img .img-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2.8rem;z-index:0}
+    .product-img img{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);object-fit:contain;z-index:1;transition:transform .35s}
+    .product-img-link:hover .product-img img{transform:scale(1.06)}
+    .img-overlay{position:absolute;inset:0;background:rgba(6,14,3,.5);color:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .25s;z-index:2}
+    .product-img-link:hover .img-overlay{opacity:1}
+    .product-body{padding:1rem 1.1rem 1.25rem;flex:1;display:flex;flex-direction:column;background:#fff}
+    .product-body h3{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--brown);margin-bottom:.3rem}
+    .size-tag{display:inline-block;font-size:.72rem;font-weight:700;color:var(--brown-light);background:rgba(184,120,42,.12);border:1px solid rgba(184,120,42,.4);border-radius:20px;padding:.1rem .55rem;margin-bottom:.5rem;letter-spacing:.03em}
+    .price{font-size:.92rem;font-weight:700;color:var(--terra);margin-bottom:.6rem;display:block}
+    .price{font-size:.9rem;font-weight:700;color:var(--terra);margin-bottom:.6rem}
+    .product-body p{font-size:.82rem;color:var(--brown-mid);flex:1;margin-bottom:.85rem}
+    .shop-btn{display:block;text-align:center;padding:.55rem 1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;transition:background .2s}
+    .shop-btn:hover{background:var(--terra-dark)}
+    .affiliate-note{position:relative;z-index:1;text-align:center;font-size:.78rem;color:var(--brown-mid);padding:0 2rem 3rem;opacity:.65}
+    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2rem;font-size:.85rem}
+    footer .footer-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+    footer a{color:rgba(255,255,255,.6)}
+    footer a:hover{color:#fff}
+    .footer-disclaimer{max-width:600px;margin:.75rem auto 0;font-size:.74rem;opacity:.5;line-height:1.5}
+    @media(max-width:600px){.products-grid{grid-template-columns:repeat(2,1fr);gap:.85rem}}
+  </style>
+</head>
+<body>
+
+  <div id="leaf-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;background:url(images/leaf-bg.jpg) center/cover no-repeat;opacity:1;"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Naturally With Harley</a>  <a href="index.html" class="nav-back">&#8592; Back to Home</a>
+  </nav>
+
+  <div class="page-header">
+    <p class="eyebrow">My favorites</p>
+    <h1>DoTERRA Must-Haves</h1>
+    <p>Every item on this page is one I personally love. Click any product to buy it on Amazon.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="products-section">
+    <p class="product-count">34 products &mdash; organized by category</p>
+    <div class="products-grid">
+
+      <!-- ── ESSENTIAL OILS (A–Z) ───────────────────────── -->
+      <div class="cat-header"><h2>Essential Oils</h2></div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/02LGXCKm?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-15.jpg" alt="DoTERRA Arborvitae Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Arborvitae Essential Oil</h3>
+          <span class="size-tag">5 mL</span>
+          <p>A grounding, woodsy oil with natural cleansing and protective properties I love.</p>
+          <span class="price">$32.00</span>
+          <a href="https://a.co/d/02LGXCKm?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/05XlxSTs?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-16.jpg" alt="DoTERRA Balance Grounding Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Balance Grounding Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>A calming blend of tree and flower oils. My daily grounding ritual starts here.</p>
+          <span class="price">$34.67</span>
+          <a href="https://a.co/d/05XlxSTs?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0iwLPxyw?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-6.jpg" alt="DoTERRA Breathe Respiratory Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Breathe Respiratory Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>My go-to for open, easy breathing. Diffuse at night or apply topically on your chest.</p>
+          <span class="price">$36.49</span>
+          <a href="https://a.co/d/0iwLPxyw?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/084qLXhw?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-5.jpg" alt="DoTERRA Citrus Bliss Invigorating Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Citrus Bliss Invigorating Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>A cheerful citrus blend that instantly lifts your mood. Perfect for diffusing all day.</p>
+          <span class="price">$33.33</span>
+          <a href="https://a.co/d/084qLXhw?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/02jKN6IT?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-32.jpg" alt="DoTERRA Clove Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Clove Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Warm, spicy, and powerful. Great for immune support, dental care, and holiday diffusing.</p>
+          <span class="price">$29.33</span>
+          <a href="https://a.co/d/02jKN6IT?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0b0FMnlV?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-33.jpg" alt="DoTERRA Copaiba Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Copaiba Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Supports overall wellness and is amazing for calming and skin care. Underrated gem.</p>
+          <span class="price">$41.99</span>
+          <a href="https://a.co/d/0b0FMnlV?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0cfB1Vt8?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-30.jpg" alt="DoTERRA Deep Blue Soothing Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Deep Blue Soothing Blend</h3>
+          <span class="size-tag">5 mL</span>
+          <p>The Deep Blue oil blend in a smaller size. Mix with a carrier oil and apply where needed.</p>
+          <span class="price">$49.95</span>
+          <a href="https://a.co/d/0cfB1Vt8?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/08Rv5C8X?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-24.jpg" alt="DoTERRA DigestZen Digestive Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA DigestZen Digestive Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>My go-to when my stomach needs support. I never travel anywhere without it.</p>
+          <span class="price">$48.85</span>
+          <a href="https://a.co/d/08Rv5C8X?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/06BhNBPN?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-23.jpg" alt="DoTERRA Eucalyptus Radiata" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Eucalyptus Radiata</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Cool and clearing. Perfect for breathing support and natural cleaning routines.</p>
+          <span class="price">$30.67</span>
+          <a href="https://a.co/d/06BhNBPN?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/03rCeBew?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-3.jpg" alt="DoTERRA Frankincense Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Frankincense Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>The ultimate grounding oil. Known for skin care, meditation, and overall wellness.</p>
+          <span class="price">$105.33</span>
+          <a href="https://a.co/d/03rCeBew?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/09DmDqo6?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-14.jpg" alt="DoTERRA Lavender Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Lavender Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>The most beloved essential oil ever. Relaxing, calming, and endlessly versatile.</p>
+          <span class="price">$37.79</span>
+          <a href="https://a.co/d/09DmDqo6?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0dlVqozp?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-1.jpg" alt="DoTERRA Lemon Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Lemon Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Bright and uplifting. Perfect for diffusing, cleaning, and mood boosting.</p>
+          <span class="price">$20.95</span>
+          <a href="https://a.co/d/0dlVqozp?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/015Usxob?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-4.jpg" alt="DoTERRA Lemon Eucalyptus Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Lemon Eucalyptus Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>A fresh and clarifying oil. Great for outdoor use and natural protection.</p>
+          <span class="price">$22.49</span>
+          <a href="https://a.co/d/015Usxob?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0fYiknVD?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-18.jpg" alt="DoTERRA Lemongrass Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Lemongrass Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Fresh, citrusy, and purifying. Love it in DIY products and diffused in the kitchen.</p>
+          <span class="price">$21.58</span>
+          <a href="https://a.co/d/0fYiknVD?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/05nWrycl?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-21.jpg" alt="DoTERRA Melaleuca Tea Tree Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Melaleuca (Tea Tree)</h3>
+          <span class="size-tag">15 mL</span>
+          <p>A powerhouse for natural cleansing, skin care, and surface cleaning around the home.</p>
+          <span class="price">$34.67</span>
+          <a href="https://a.co/d/05nWrycl?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/08dOXskG?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-34.jpg" alt="DoTERRA PastTense Tension Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA PastTense Tension Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>My tension and headache hero. I roll this on my temples whenever I feel stressed.</p>
+          <span class="price">$44.95</span>
+          <a href="https://a.co/d/08dOXskG?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0abLxnjN?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-2.jpg" alt="DoTERRA Peppermint Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Peppermint Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Cooling and energizing. Great for headaches, digestion, and mental clarity.</p>
+          <span class="price">$33.95</span>
+          <a href="https://a.co/d/0abLxnjN?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0ck3QBYc?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-28.jpg" alt="DoTERRA Purify Cleansing Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Purify Cleansing Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Refreshes the air and neutralizes odors naturally. My home always smells amazing with this.</p>
+          <span class="price">$34.67</span>
+          <a href="https://a.co/d/0ck3QBYc?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/08mhve52?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-11.jpg" alt="DoTERRA Rose Touch Roll On" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Rose Touch Roll On</h3>
+          <span class="size-tag">10 mL</span>
+          <p>A luxury roll-on blend. Warm, floral, and great for emotional balance and mood.</p>
+          <span class="price">$96.00</span>
+          <a href="https://a.co/d/08mhve52?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/03PeJs4p?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-19.jpg" alt="DoTERRA Rosemary Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Rosemary Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Herbaceous and invigorating. Supports focus and is amazing for hair care routines.</p>
+          <span class="price">$29.33</span>
+          <a href="https://a.co/d/03PeJs4p?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/05t3Mr2C?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-22.jpg" alt="DoTERRA Serenity Restful Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Serenity Restful Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>A dreamy blend to unwind at night. I use this every single evening before bed.</p>
+          <span class="price">$56.00</span>
+          <a href="https://a.co/d/05t3Mr2C?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0i5GbSQH?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-31.jpg" alt="DoTERRA TerraShield Repellent Blend" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA TerraShield Repellent Blend</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Natural outdoor protection made with plant-based ingredients I feel completely good about.</p>
+          <span class="price">$21.58</span>
+          <a href="https://a.co/d/0i5GbSQH?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/02v2B6Xv?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-20.jpg" alt="DoTERRA Wild Orange Essential Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Wild Orange Essential Oil</h3>
+          <span class="size-tag">15 mL</span>
+          <p>Bright, sweet, and energizing. One of my favorite mood-boosting oils to diffuse.</p>
+          <span class="price">$20.74</span>
+          <a href="https://a.co/d/02v2B6Xv?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <!-- ── TOPICAL CREAMS & STICKS (A–Z) ─────────────── -->
+      <div class="cat-header"><h2>Topical Creams &amp; Sticks</h2></div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0c1sqr94?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-8.jpg" alt="DoTERRA Deep Blue Rub" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Deep Blue Rub</h3>
+          <span class="size-tag">4 fl oz</span>
+          <p>A cooling cream for tired muscles and joints. I use this after every workout — obsessed.</p>
+          <span class="price">$51.33</span>
+          <a href="https://a.co/d/0c1sqr94?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0dBEhXJc?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-27.jpg" alt="DoTERRA Deep Blue Rub Samples Pack of 10" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Deep Blue Rub Samples</h3>
+          <span class="size-tag">Pack of 10</span>
+          <p>Try before you commit — perfect to share with friends or keep in your gym bag.</p>
+          <span class="price">$15.56</span>
+          <a href="https://a.co/d/0dBEhXJc?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0b0leEzA?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-7.jpg" alt="DoTERRA Deep Blue Stick" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Deep Blue Stick</h3>
+          <span class="size-tag">0.88 oz</span>
+          <p>Targeted, on-the-go soothing for sore muscles and tension. Fits right in your purse.</p>
+          <span class="price">$38.00</span>
+          <a href="https://a.co/d/0b0leEzA?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <!-- ── CARRIER OILS (A–Z) ─────────────────────────── -->
+      <div class="cat-header"><h2>Carrier Oils</h2></div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/074kpxI1?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-10.jpg" alt="DoTERRA Castor Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Castor Oil</h3>
+          <span class="size-tag">300 mL</span>
+          <p>A versatile and nourishing oil for hair, skin, and wellness rituals. I use it daily.</p>
+          <span class="price">$37.33</span>
+          <a href="https://a.co/d/074kpxI1?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/00yXveC9?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-17.jpg" alt="DoTERRA Fractionated Coconut Oil" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Fractionated Coconut Oil</h3>
+          <span class="size-tag">3.8 oz</span>
+          <p>The perfect base for diluting your favorite blends. Lightweight and non-greasy.</p>
+          <span class="price">$21.19</span>
+          <a href="https://a.co/d/00yXveC9?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <!-- ── WELLNESS SUPPLEMENTS (A–Z) ────────────────── -->
+      <div class="cat-header"><h2>Wellness Supplements</h2></div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0dzEdAcg?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-13.jpg" alt="DoTERRA Ginger Throat Drops" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Ginger Throat Drops</h3>
+          <span class="size-tag">30 ct</span>
+          <p>Soothing and warming. These are amazing when your throat and stomach need support.</p>
+          <span class="price">$22.38</span>
+          <a href="https://a.co/d/0dzEdAcg?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0jbUBygo?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-12.jpg" alt="DoTERRA On Guard Beadlets" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA On Guard Beadlets</h3>
+          <span class="size-tag">125 ct</span>
+          <p>Convenient beadlets to support your immune system on the go. Always in my bag.</p>
+          <span class="price">$29.05</span>
+          <a href="https://a.co/d/0jbUBygo?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0aVtvhdO?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-26.jpg" alt="DoTERRA On Guard Throat Drops" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA On Guard Throat Drops</h3>
+          <span class="size-tag">30 ct</span>
+          <p>Sweet, soothing protection for your throat. Always keep a bag in my cabinet.</p>
+          <span class="price">$21.68</span>
+          <a href="https://a.co/d/0aVtvhdO?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/07u8SBHo?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-9.jpg" alt="DoTERRA On Guard Throat Drops 2 Pack" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA On Guard Throat Drops</h3>
+          <span class="size-tag">2 Pack</span>
+          <p>Stock up on the best throat drops. That honey and lemon flavor is so good.</p>
+          <span class="price">$36.66</span>
+          <a href="https://a.co/d/07u8SBHo?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/08Zo5mPT?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-29.jpg" alt="DoTERRA TriEase Seasonal Softgels" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA TriEase Seasonal Softgels</h3>
+          <span class="size-tag">60 softgels</span>
+          <p>Seasonal wellness support in a convenient softgel. I take these every single day.</p>
+          <span class="price">$37.33</span>
+          <a href="https://a.co/d/08Zo5mPT?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+      <!-- ── KITS ───────────────────────────────────────── -->
+      <div class="cat-header"><h2>Kits</h2></div>
+
+      <div class="product-card">
+        <a href="https://a.co/d/0cK9GBle?tag=naturallyw0be-20" class="product-img-link" target="_blank" rel="noopener">
+          <div class="product-img">
+            <div class="img-label">&#127807;</div>
+            <img src="images/doterra-25.jpg" alt="DoTERRA Travel Kit" onerror="this.style.display='none'" />
+            <div class="img-overlay">Shop on Amazon &#8594;</div>
+          </div>
+        </a>
+        <div class="product-body">
+          <h3>DoTERRA Travel Kit</h3>
+          <span class="size-tag">Starter Kit</span>
+          <p>The perfect introduction to DoTERRA. Also makes an amazing gift for anyone curious about oils.</p>
+          <span class="price">$44.00</span>
+          <a href="https://a.co/d/0cK9GBle?tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop on Amazon</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="affiliate-note">This page contains affiliate links. I may earn a small commission at no extra cost to you. Thank you for supporting Naturally With Harley!</p>
+  <footer>
+    <div class="footer-logo">Naturally With Harley</div>
+    <p>&#169; 2026 Naturally With Harley &middot; <a href="index.html">Home</a></p>
+    <p class="footer-disclaimer">This site contains affiliate links. I may earn a small commission at no extra cost to you when you purchase through my links.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

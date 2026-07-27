@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From-Scratch Brownies — Naturally With Harley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--cream:#D8E8C8;--beige:#BAD4A0;--terra:#14420A;--terra-dark:#0A2904;--brown:#060E03;--brown-mid:#162810;--brown-light:#B8782A;--white:#EAF2E2;--yellow:#F5C518;--yellow-dark:#D4A800;--shadow:rgba(24,46,12,.14)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:#FFD700;line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px solid var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;box-shadow:0 2px 12px var(--shadow)}
+    .nav-logo{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--terra);border-bottom:2.5px solid var(--yellow);padding-bottom:2px}
+    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFD700;transition:color .2s}
+    .post-hero{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:5rem 2rem 4rem}
+    .post-hero .cat{display:inline-block;background:var(--yellow);color:var(--terra);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .85rem;border-radius:2px;margin-bottom:1.25rem}
+    .post-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);line-height:1.25;max-width:720px;margin:0 auto 1rem}
+    .post-hero .meta{font-size:.85rem;opacity:.65}
+    .post-hero .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1rem auto 0}
+    .post-body{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:4rem 2rem 5rem}
+    .post-body p{font-size:1.05rem;color:#FFD700;margin-bottom:1.5rem}
+    .post-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#FFD700;margin:2.5rem 0 .75rem}
+    .recipe-box{background:#fff;border-left:4px solid var(--yellow);border-radius:0 6px 6px 0;padding:1.5rem 1.75rem;margin:2rem 0;box-shadow:0 2px 12px var(--shadow)}
+    .recipe-box h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--brown-light);margin-bottom:.75rem}
+    .recipe-box li{font-size:.95rem;color:var(--brown-mid);margin-bottom:.4rem}
+    .recipe-box ul,.recipe-box ol{padding-left:1.25rem}
+    .recipe-box ol li{margin-bottom:.6rem;color:var(--brown-mid)}
+    .tip-box{background:var(--beige);border-left:4px solid var(--terra);border-radius:0 6px 6px 0;padding:1.25rem 1.5rem;margin:2rem 0}
+    .tip-box p{margin:0;font-size:.95rem;color:var(--brown-mid)}
+    .post-img{position:relative;z-index:1;max-height:480px;overflow:hidden}
+    .post-img img{width:100%;height:480px;object-fit:cover;object-position:center}
+    .back-link{display:inline-block;margin-top:2rem;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFD700;border-bottom:1.5px solid var(--yellow)}
+    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2rem;font-size:.85rem}
+    .footer-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+    footer a{color:rgba(255,255,255,.6)}
+  </style>
+</head>
+<body>
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;background:url(images/leaf-bg.jpg) center/cover no-repeat;opacity:1;"></div>
+  <nav>
+    <a href="index.html" class="nav-logo">Naturally With Harley</a>
+    <a href="homemade.html" class="nav-back">&#8592; Homemade Recipes</a>
+  </nav>
+  <div class="post-hero">
+    <span class="cat">Sweets</span>
+    <h1>From-Scratch Brownies</h1>
+    <p class="meta">By Harley &nbsp;&middot;&nbsp; From My Kitchen</p>
+    <div class="divider"></div>
+  </div>
+  <div class="post-img"><img src="images/recipe-brownies.jpg" alt="From scratch brownies" /></div>
+  <div class="post-body">
+    <p>I threw out every box mix the day I made these. They are fudgy, rich, deeply chocolatey, and made with ingredients I can actually pronounce. Eight ingredients, one bowl, one pan. The hardest part is waiting for them to cool before you cut into them — and honestly, I don't always manage that.</p>
+    <p>These are the brownies people ask me about. Every single time I bring them somewhere, someone wants the recipe.</p>
+
+    <div class="recipe-box">
+      <h3>What You Need — Makes 16 brownies (8x8 pan)</h3>
+      <ul>
+        <li>½ cup (1 stick) butter</li>
+        <li>1 cup sugar</li>
+        <li>2 large eggs</li>
+        <li>1 tsp pure vanilla extract</li>
+        <li>⅓ cup unsweetened cocoa powder</li>
+        <li>½ cup all-purpose flour</li>
+        <li>¼ tsp salt</li>
+        <li>¼ tsp baking powder</li>
+      </ul>
+    </div>
+
+    <h2>How to Make It</h2>
+    <div class="recipe-box">
+      <ol>
+        <li>Preheat your oven to 350°F. Grease an 8x8 inch baking pan.</li>
+        <li>Melt the butter in a medium saucepan over low heat. Remove from the heat and let it cool for a couple of minutes.</li>
+        <li>Stir the sugar into the melted butter until combined.</li>
+        <li>Add the eggs and vanilla and stir vigorously until the mixture is smooth and glossy.</li>
+        <li>Add the cocoa powder, flour, salt, and baking powder. Stir until just combined — don't overmix.</li>
+        <li>Pour into the prepared pan and spread evenly.</li>
+        <li>Bake 25–30 minutes. A toothpick inserted in the center should come out with a few moist crumbs, not wet batter.</li>
+        <li>Cool completely in the pan before cutting. I know it's hard. Do it anyway — the texture is so much better.</li>
+      </ol>
+    </div>
+
+    <div class="tip-box">
+      <p><strong>Harley's tip:</strong> For cleaner slices, run your knife under hot water, wipe it dry, and cut. Repeat between each slice. Makes a huge difference in how they look when you serve them.</p>
+    </div>
+
+    <p>Want to make them extra fudgy? Add a handful of chocolate chips to the batter before baking. They melt in and create little pockets of chocolate throughout that take these completely over the top.</p>
+
+    <a href="homemade.html" class="back-link">&#8592; Back to Homemade Recipes</a>
+  </div>
+  <footer>
+    <div class="footer-logo">Naturally With Harley</div>
+    <p>&copy; 2026 Naturally With Harley &middot; <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>

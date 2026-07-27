@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epsom Salt Soaks — My Favorites | Naturally With Harley</title>
+  <meta name="description" content="My favorite epsom salt soaks, detox blends, and bath products. Magnesium-rich, affordable, and actually effective." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#D8E8C8;--beige:#BAD4A0;
+      --terra:#14420A;--terra-dark:#0A2904;
+      --brown:#060E03;--brown-mid:#162810;
+      --brown-light:#B8782A;
+      --white:#EAF2E2;
+      --yellow:#F5C518;--yellow-dark:#D4A800;
+      --shadow:rgba(24,46,12,.14)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:var(--brown);line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+
+    nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px solid var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;box-shadow:0 2px 12px var(--shadow)}
+    .nav-logo{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--terra);border-bottom:2.5px solid var(--yellow);padding-bottom:2px}
+    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);transition:color .2s}
+    .nav-back:hover{color:var(--terra)}
+
+    .page-hero{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:5rem 2rem 4rem}
+    .page-hero .eyebrow{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--yellow-dark);margin-bottom:.5rem}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;max-width:700px;margin:0 auto 1rem}
+    .page-hero p{max-width:580px;margin:0 auto;opacity:.85;font-size:1.05rem}
+    .page-hero .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1.25rem auto 0}
+
+    .intro-strip{position:relative;z-index:1;background:var(--white);padding:3rem 2rem;text-align:center}
+    .intro-strip p{max-width:680px;margin:0 auto;font-size:1.05rem;color:var(--brown-mid)}
+
+    .cat-section{position:relative;z-index:1;padding:4rem 2rem}
+    .cat-section:nth-child(even){background:var(--white)}
+    .cat-section:nth-child(odd){background:var(--cream)}
+
+    .cat-header{max-width:1100px;margin:0 auto 2rem;display:flex;align-items:center;gap:1.5rem}
+    .cat-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--brown-light);white-space:nowrap;letter-spacing:.02em}
+    .cat-header::after{content:'';flex:1;height:3px;background:var(--yellow);opacity:.9;border-radius:2px}
+    .product-count{font-size:1.6rem;font-weight:700;color:var(--yellow-dark)}
+
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.75rem;max-width:1100px;margin:0 auto}
+
+    .product-card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
+
+    .product-img{width:100%;padding-bottom:85%;position:relative;overflow:hidden;background:#f9f9f9}
+    .product-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:transform .35s}
+    .product-card:hover .product-img img{transform:scale(1.04)}
+    .product-img .img-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;background:#f9f9f9;z-index:0}
+
+    .product-body{padding:1.25rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
+    .product-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);padding:.2rem .7rem;background:var(--yellow);border-radius:2px;margin-bottom:.5rem}
+    .product-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--brown);margin:.3rem 0 .5rem;line-height:1.35}
+    .product-body p{font-size:.9rem;color:var(--brown-mid);flex:1}
+    .product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1.1rem}
+    .harley-pick{font-family:'Dancing Script',cursive;font-size:.9rem;color:var(--yellow-dark)}
+    .shop-btn{display:inline-block;padding:.5rem 1.1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;transition:background .2s}
+    .shop-btn:hover{background:var(--terra-dark)}
+
+    .tip-banner{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:4rem 2rem}
+    .tip-banner h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1rem}
+    .tip-banner p{max-width:600px;margin:0 auto .5rem;opacity:.85;font-size:1rem}
+    .tip-banner .divider{background:var(--yellow);margin:1.25rem auto 0}
+
+    .tip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;max-width:900px;margin:2.5rem auto 0}
+    .tip-card{background:rgba(255,255,255,.1);border-radius:6px;padding:1.75rem 1.5rem;text-align:left}
+    .tip-card .tip-icon{font-size:1.8rem;margin-bottom:.75rem}
+    .tip-card h4{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:.4rem;color:var(--yellow)}
+    .tip-card p{font-size:.88rem;opacity:.82}
+
+    .back-strip{position:relative;z-index:1;background:var(--cream);padding:2.5rem 2rem;text-align:center}
+    .back-link{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);border-bottom:1.5px solid var(--yellow)}
+    .back-link:hover{color:var(--terra)}
+
+    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2.5rem 2rem;font-size:.85rem}
+    .footer-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+    footer a{color:rgba(255,255,255,.6)}
+    footer a:hover{color:#fff}
+    .footer-disclaimer{max-width:600px;margin:.75rem auto 0;font-size:.74rem;opacity:.5;line-height:1.5}
+  </style>
+</head>
+<body>
+
+  <div id="leaf-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;background:url(images/leaf-bg.jpg) center/cover no-repeat;opacity:1;"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Naturally With Harley</a>
+    <a href="index.html" class="nav-back">&#8592; Homepage</a>
+  </nav>
+
+  <div class="page-hero">
+    <p class="eyebrow">Self-Care Staple</p>
+    <h1>Epsom Salt Soaks I Actually Use</h1>
+    <p>Magnesium-rich soaks that ease sore muscles, calm your nervous system, and give you a real reset. These are the ones I keep stocked in my bathroom year-round.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="intro-strip">
+    <p>I started using epsom salts seriously about two years ago and it genuinely changed how I recover from long weeks. Below are my go-to picks by category — from everyday soaks to extra-strength detox blends and everything in between. Every one of these ships through Amazon so you can grab them easily.</p>
+  </div>
+
+  <!-- ── EVERYDAY SOAKS ─────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Everyday Soaks</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🛁</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Dr Teal's Pure Epsom Salt</h3>
+          <p>The classic. Unscented and pure — I use this as my base and add my own essential oils. Great value, dissolves fast, and works every time.</p>
+          <div class="product-footer">
+            <span class="harley-pick">My everyday pick</span>
+            <a href="https://www.amazon.com/s?k=dr+teals+pure+epsom+salt&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌿</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Dr Teal's Lavender Epsom Soak</h3>
+          <p>Lavender and epsom salt are a perfect pairing — calming, muscle-soothing, and it smells incredible. This one is in my bathroom every single week.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Harley's pick ♥</span>
+            <a href="https://www.amazon.com/s?k=dr+teals+lavender+epsom+salt&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌱</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Epsoak Epsom Salt — Bulk</h3>
+          <p>If you soak regularly, buying in bulk is the move. Epsoak is pharmaceutical grade, pure, and comes in sizes that actually last. A serious saver.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Best value</span>
+            <a href="https://www.amazon.com/s?k=epsoak+epsom+salt+bulk&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌸</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Dr Teal's Coconut Oil Soak</h3>
+          <p>The coconut oil addition makes such a difference — your skin comes out of this bath actually soft, not just clean. A step up from basic epsom with zero extra work.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Skin-softening</span>
+            <a href="https://www.amazon.com/s?k=dr+teals+coconut+oil+epsom+soak&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── DETOX BLENDS ───────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Detox Blends</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🖤</div></div>
+        <div class="product-body">
+          <span class="product-tag">Detox</span>
+          <h3>Activated Charcoal Detox Soak</h3>
+          <p>Activated charcoal draws out impurities while you soak. Combined with epsom salt, this is one of the most thorough resets I've found for end-of-week recovery.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Deep cleanse</span>
+            <a href="https://www.amazon.com/s?k=activated+charcoal+epsom+salt+detox+bath&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌊</div></div>
+        <div class="product-body">
+          <span class="product-tag">Detox</span>
+          <h3>Dead Sea Salt + Epsom Blend</h3>
+          <p>Dead sea salt is packed with minerals that plain epsom salt doesn't have. The combination is next level — I use this when I need a serious reset, not just a relaxing soak.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Mineral-rich</span>
+            <a href="https://www.amazon.com/s?k=dead+sea+salt+epsom+blend+detox+bath&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🍃</div></div>
+        <div class="product-body">
+          <span class="product-tag">Detox</span>
+          <h3>Bentonite Clay Bath Soak</h3>
+          <p>Bentonite clay binds to toxins and pulls them out of your skin. Mix it with epsom salt and baking soda and you have one of the best detox baths out there. I make my own but this brand is a great ready-made option.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Purifying</span>
+            <a href="https://www.amazon.com/s?k=bentonite+clay+detox+bath+soak&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌿</div></div>
+        <div class="product-body">
+          <span class="product-tag">Detox</span>
+          <h3>Eucalyptus Detox Bath Salt</h3>
+          <p>Eucalyptus opens everything up — your sinuses, your pores, your whole body. This blend is what I reach for when I feel a cold coming on or when I need to really breathe.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Sinus & recovery</span>
+            <a href="https://www.amazon.com/s?k=eucalyptus+detox+bath+salts&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── KIDS & FAMILY ──────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Kids &amp; Family</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🧒</div></div>
+        <div class="product-body">
+          <span class="product-tag">Kids</span>
+          <h3>Baby Epsom Soak — Lavender</h3>
+          <p>Gentle, lavender-scented, and formulated for sensitive skin. I use a small amount in my son's bath a few nights a week. It genuinely helps him wind down and sleep better.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Son-approved</span>
+            <a href="https://www.amazon.com/s?k=baby+epsom+salt+soak+lavender+kids&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌈</div></div>
+        <div class="product-body">
+          <span class="product-tag">Kids</span>
+          <h3>Colorful Kids Bath Soak</h3>
+          <p>Getting kids excited about bath time is half the battle. These fun, colorful soaks still have the benefits of epsom salt but make it feel like a treat instead of a routine.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Bath time win</span>
+            <a href="https://www.amazon.com/s?k=kids+bath+soak+epsom+salt+fun&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🛁</div></div>
+        <div class="product-body">
+          <span class="product-tag">Family</span>
+          <h3>Family Size Epsom Salt</h3>
+          <p>When you're using epsom salt for everyone in the house, you need the big bag. This keeps us stocked for months. The whole family uses it — baths, foot soaks, everything.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Family staple</span>
+            <a href="https://www.amazon.com/s?k=epsom+salt+large+family+size&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOT SOAKS ─────────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Foot Soaks</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🦶</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Peppermint Foot Soak</h3>
+          <p>After being on your feet all day, this is pure relief. Peppermint cools and soothes while the epsom salt draws out the ache. Ten minutes and your feet feel completely different.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Instant relief</span>
+            <a href="https://www.amazon.com/s?k=peppermint+epsom+salt+foot+soak&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🌿</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Tea Tree Foot Soak</h3>
+          <p>Tea tree is naturally antifungal and antibacterial — combined with epsom salt for a foot soak, it keeps feet healthy and clean. I do this once a week and my feet have never looked better.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Foot health</span>
+            <a href="https://www.amazon.com/s?k=tea+tree+foot+soak+epsom+salt&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🪣</div></div>
+        <div class="product-body">
+          <span class="product-tag">Self-Care</span>
+          <h3>Collapsible Foot Soak Tub</h3>
+          <p>You need a good tub if you're doing foot soaks regularly. This collapsible one is the one I have — easy to store, deep enough to actually soak properly, and cleans up in seconds.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Essential tool</span>
+            <a href="https://www.amazon.com/s?k=collapsible+foot+soak+tub+basin&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── GIFT SETS ───────────────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Gift Sets</h2></div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🎁</div></div>
+        <div class="product-body">
+          <span class="product-tag">Gift</span>
+          <h3>Spa Bath Gift Set</h3>
+          <p>Epsom salts, bath bombs, and maybe a candle — these gift sets look beautiful and actually get used. My go-to gift for birthdays, baby showers, or anyone who needs to relax.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Perfect gift</span>
+            <a href="https://www.amazon.com/s?k=spa+bath+salt+gift+set+epsom&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🛁</div></div>
+        <div class="product-body">
+          <span class="product-tag">Gift</span>
+          <h3>Dr Teal's Variety Gift Set</h3>
+          <p>Dr Teal's gift sets come with multiple scents so you can find your favorites. Great for someone just getting into natural soaks — and honestly, just as good as a treat for yourself.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Great value</span>
+            <a href="https://www.amazon.com/s?k=dr+teals+gift+set+epsom&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><div class="img-label">🕯️</div></div>
+        <div class="product-body">
+          <span class="product-tag">Gift</span>
+          <h3>Self-Care Night Gift Bundle</h3>
+          <p>Bath salts, a candle, and something to sip. The full self-care ritual in a box. These curated bundles make giving a thoughtful gift easy without any extra work.</p>
+          <div class="product-footer">
+            <span class="harley-pick">Treat yourself</span>
+            <a href="https://www.amazon.com/s?k=self+care+bath+gift+bundle+epsom+candle&tag=naturallyw0be-20" class="shop-btn" target="_blank" rel="noopener">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── HOW TO SOAK RIGHT ───────────────────────────── -->
+  <div class="tip-banner">
+    <h2>How to Get the Most Out of Your Soak</h2>
+    <p>Epsom salt isn't complicated, but a few simple things make a real difference in how effective it actually is.</p>
+    <div class="divider"></div>
+    <div class="tip-grid">
+      <div class="tip-card">
+        <div class="tip-icon">💧</div>
+        <h4>Warm, Not Hot</h4>
+        <p>Scalding water can be hard on your skin. Warm water opens your pores just enough for the magnesium to absorb properly without stripping your skin.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">⏱️</div>
+        <h4>20 Minutes Minimum</h4>
+        <p>Your body needs at least 20 minutes to start absorbing the magnesium. Set a timer, put your phone in the other room, and actually let yourself rest.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📏</div>
+        <h4>Use Enough Salt</h4>
+        <p>Most soaks recommend 1–2 cups for a full bath. Don't skimp — you need a real concentration of magnesium for it to be effective, not just a sprinkle.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌿</div>
+        <h4>Add Essential Oils</h4>
+        <p>Lavender for calm, eucalyptus for respiratory support, peppermint for muscle relief. A few drops of the right oil makes your soak work harder for you.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-strip">
+    <a href="index.html" class="back-link">&#8592; Back to Homepage</a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Naturally With Harley</div>
+    <p>&copy; 2026 Naturally With Harley &middot; <a href="index.html">Home</a></p>
+    <p class="footer-disclaimer">This site contains affiliate links. I may earn a small commission at no extra cost to you when you purchase through my links. I only recommend products I personally use and love.</p>
+  </footer>
+
+</body>
+</html>

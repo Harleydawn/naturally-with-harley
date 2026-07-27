@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homemade From Scratch — Naturally With Harley</title>
+  <meta name="description" content="Real recipes I actually make at home. Clean ingredients, from scratch — bread, sweets, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#D8E8C8;--beige:#BAD4A0;
+      --terra:#14420A;--terra-dark:#0A2904;
+      --brown:#060E03;--brown-mid:#162810;
+      --brown-light:#B8782A;
+      --white:#EAF2E2;
+      --yellow:#F5C518;--yellow-dark:#D4A800;
+      --shadow:rgba(24,46,12,.14)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:var(--brown);line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+
+    nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px solid var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;box-shadow:0 2px 12px var(--shadow)}
+    .nav-logo{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--terra);border-bottom:2.5px solid var(--yellow);padding-bottom:2px}
+    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);transition:color .2s}
+    .nav-back:hover{color:var(--terra)}
+
+    .page-hero{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:5rem 2rem 4rem}
+    .page-hero .eyebrow{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--yellow-dark);margin-bottom:.5rem}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;max-width:700px;margin:0 auto 1rem}
+    .page-hero p{max-width:580px;margin:0 auto;opacity:.85;font-size:1.05rem}
+    .page-hero .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1.25rem auto 0}
+
+    .intro-strip{position:relative;z-index:1;background:var(--white);padding:3rem 2rem;text-align:center}
+    .intro-strip p{max-width:680px;margin:0 auto;font-size:1.05rem;color:var(--brown-mid)}
+
+    .cat-section{position:relative;z-index:1;padding:4rem 2rem}
+    .cat-section:nth-child(even){background:var(--white)}
+    .cat-section:nth-child(odd){background:var(--cream)}
+
+    .cat-header{max-width:1100px;margin:0 auto 2rem;display:flex;align-items:center;gap:1.5rem}
+    .cat-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--brown-light);white-space:nowrap;letter-spacing:.02em}
+    .cat-header::after{content:'';flex:1;height:3px;background:var(--yellow);opacity:.9;border-radius:2px}
+
+    .recipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.75rem;max-width:1100px;margin:0 auto}
+
+    .recipe-card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+    .recipe-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
+
+    .recipe-img{width:100%;padding-bottom:62%;position:relative;overflow:hidden;background:var(--beige);display:flex;align-items:center;justify-content:center}
+    .recipe-img .img-icon{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;font-size:3rem;background:var(--terra)}
+    .recipe-img .img-icon span{font-size:1rem;font-weight:700;font-family:'Playfair Display',serif;letter-spacing:.08em;color:var(--yellow);text-shadow:0 0 8px var(--yellow),0 0 18px var(--yellow),0 0 32px var(--yellow-dark)}
+
+    .recipe-body{padding:1.25rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
+    .recipe-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);padding:.2rem .7rem;background:var(--yellow);border-radius:2px;margin-bottom:.5rem}
+    .recipe-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--brown);margin:.3rem 0 .5rem;line-height:1.35}
+    .recipe-body p{font-size:.9rem;color:var(--brown-mid);flex:1}
+    .recipe-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1.1rem}
+    .harley-note{font-family:'Dancing Script',cursive;font-size:.9rem;color:var(--yellow-dark)}
+    .coming-btn{display:inline-block;padding:.5rem 1.1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;opacity:.7;cursor:default}
+
+    .back-strip{position:relative;z-index:1;background:var(--cream);padding:2.5rem 2rem;text-align:center}
+    .back-link{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);border-bottom:1.5px solid var(--yellow)}
+    .back-link:hover{color:var(--terra)}
+
+    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2.5rem 2rem;font-size:.85rem}
+    .footer-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+    footer a{color:rgba(255,255,255,.6)}
+    footer a:hover{color:#fff}
+    .footer-disclaimer{max-width:600px;margin:.75rem auto 0;font-size:.74rem;opacity:.5;line-height:1.5}
+  </style>
+</head>
+<body>
+
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;background:url(images/leaf-bg.jpg) center/cover no-repeat;opacity:1;"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Naturally With Harley</a>
+    <a href="index.html" class="nav-back">&#8592; Homepage</a>
+  </nav>
+
+  <div class="page-hero">
+    <p class="eyebrow">From My Kitchen</p>
+    <h1>Homemade &amp; From Scratch</h1>
+    <p>Real food made with real ingredients. No preservatives, no mystery additives — just the recipes I actually make for my family every week.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="intro-strip">
+    <p>I started making things from scratch because I wanted to know exactly what was going into our food. Turns out it's easier than I thought — and everything tastes so much better. These are the recipes I keep coming back to.</p>
+  </div>
+
+  <!-- ── BREADS & DOUGH ─────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Breads &amp; Dough</h2></div>
+    <div class="recipe-grid">
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🥖</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Hoagie Rolls</h3>
+          <p>Soft, chewy, and so much better than store-bought. I use these for sandwiches all week long and my family refuses to go back to the bagged stuff.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Family staple</span>
+            <a href="recipe-hoagie-rolls.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍔</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Hamburger Buns</h3>
+          <p>Fluffy, golden, and they hold up to even the juiciest burger. Once you make these you'll never want a store bun again — they're that good.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Burger night favorite</span>
+            <a href="recipe-hamburger-buns.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🌭</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Hotdog Buns</h3>
+          <p>Same soft dough as my hamburger buns, just shaped differently. Clean ingredients, no junk — and the kids love them every single time.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Kid-approved</span>
+            <a href="recipe-hotdog-buns.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍕</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Dough</span>
+          <h3>Homemade Pizza Dough</h3>
+          <p>Six ingredients and ten minutes of hands-on time. This is our Friday night tradition and it never gets old. Crispy on the outside, chewy on the inside.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Friday night tradition</span>
+            <a href="recipe-pizza-dough.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍞</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Sandwich Bread</h3>
+          <p>Seven ingredients, no junk. Soft, fluffy, and slices perfectly every time. My kids take sandwiches on this bread every day and I feel good about every single one.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Weekly staple</span>
+            <a href="recipe-sandwich-bread.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SWEET TREATS ───────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>Sweet Treats</h2></div>
+    <div class="recipe-grid">
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍫</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Pantry</span>
+          <h3>Homemade Chocolate Syrup</h3>
+          <p>Five ingredients, five minutes, and you'll never buy Hershey's again. I drizzle this on everything and feel good about every single drop.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Clean indulgence</span>
+            <a href="recipe-chocolate-syrup.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍪</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Sweets</span>
+          <h3>My Go-To Cookies</h3>
+          <p>Crispy edges, soft centers, and made with real butter and real sugar. This is the recipe I've made a hundred times and it never misses.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Never fails</span>
+            <a href="recipe-cookies.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍫</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Sweets</span>
+          <h3>From-Scratch Brownies</h3>
+          <p>Fudgy, rich, and made without a box mix. Just real cocoa, butter, and sugar — the way brownies are supposed to taste. These disappear fast.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Gone in minutes</span>
+            <a href="recipe-brownies.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FROM SCRATCH ───────────────────────────── -->
+  <section class="cat-section">
+    <div class="cat-header"><h2>From Scratch</h2></div>
+    <div class="recipe-grid">
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍊</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Drinks</span>
+          <h3>Homemade Fresh Juice</h3>
+          <p>No sugar added, no concentrate — just real fruit. I make a big pitcher a few times a week and it's the one thing everyone in the house actually drinks.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Whole family drinks it</span>
+            <a href="recipe-juice.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <div class="img-icon">🍝</div>
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Dinner</span>
+          <h3>Homemade Ravioli</h3>
+          <p>It takes a little time but it's so worth it. Fresh pasta, real filling, no mystery ingredients. This is the dinner my family asks for on special nights.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Special occasion dinner</span>
+            <a href="recipe-ravioli.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="back-strip">
+    <a href="index.html" class="back-link">&#8592; Back to Homepage</a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Naturally With Harley</div>
+    <p>&copy; 2026 Naturally With Harley &middot; <a href="index.html">Home</a></p>
+    <p class="footer-disclaimer">Everything I share here is from my own kitchen and my own experience. Always use your best judgment when trying new recipes.</p>
+  </footer>
+
+</body>
+</html>
