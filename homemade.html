@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -51,9 +51,9 @@
     .recipe-card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
     .recipe-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
 
-    .recipe-img{width:100%;padding-bottom:62%;position:relative;overflow:hidden;background:var(--beige);display:flex;align-items:center;justify-content:center}
-    .recipe-img .img-icon{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;font-size:3rem;background:var(--terra)}
-    .recipe-img .img-icon span{font-size:1rem;font-weight:700;font-family:'Playfair Display',serif;letter-spacing:.08em;color:var(--yellow);text-shadow:0 0 8px var(--yellow),0 0 18px var(--yellow),0 0 32px var(--yellow-dark)}
+    .recipe-img{width:100%;padding-bottom:62%;position:relative;overflow:hidden;background:var(--beige)}
+    .recipe-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .recipe-card:hover .recipe-img img{transform:scale(1.05)}
 
     .recipe-body{padding:1.25rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
     .recipe-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);padding:.2rem .7rem;background:var(--yellow);border-radius:2px;margin-bottom:.5rem}
@@ -110,7 +110,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🥖</div>
+          <img src="https://images.unsplash.com/photo-1757332914512-ffaf5b521ba8?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Fresh golden-brown hoagie rolls" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Bread</span>
@@ -125,7 +125,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍔</div>
+          <img src="https://images.unsplash.com/photo-1541796512681-800c76e2657e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade hamburger buns" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Bread</span>
@@ -140,7 +140,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🌭</div>
+          <img src="https://images.unsplash.com/photo-1695089028533-c6e9cf1ee3cb?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade hotdog buns" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Bread</span>
@@ -155,7 +155,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍕</div>
+          <img src="https://images.unsplash.com/photo-1745031854888-3bc4344e37a1?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Stretching homemade pizza dough" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Dough</span>
@@ -170,7 +170,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍞</div>
+          <img src="https://images.unsplash.com/photo-1535225192997-f901a0de048d?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Fresh homemade sandwich bread loaf" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Bread</span>
@@ -179,6 +179,81 @@
           <div class="recipe-footer">
             <span class="harley-note">Weekly staple</span>
             <a href="recipe-sandwich-bread.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1454872442736-d1126f56be8a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Freshly baked homemade soft pretzels" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Soft Pretzels</h3>
+          <p>Chewy on the inside, golden and salted on the outside — just like the ones at the mall but made right in your own kitchen. My family goes crazy for these every single time.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Family favorite snack</span>
+            <a href="recipe-soft-pretzels.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1671036437036-0b1f11c80941?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Soft golden homemade dinner rolls" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Dinner Rolls</h3>
+          <p>Soft, pillowy, and brushed with butter straight out of the oven. These are the rolls everyone reaches for first at the dinner table — and they're so easy to make.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Gone before dinner's done</span>
+            <a href="recipe-dinner-rolls.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1694632288834-17d86b340745?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade cinnamon rolls with icing" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Cinnamon Rolls</h3>
+          <p>Thick, gooey, and smothered in cream cheese icing. I make these on weekend mornings and the whole house smells incredible. Worth every single minute.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Weekend morning treat</span>
+            <a href="recipe-cinnamon-rolls.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1655979284091-eea0e93405ee?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade naan bread" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Naan</h3>
+          <p>Soft, chewy, and slightly charred — cooked right on the stovetop. I make this alongside soups, stews, and anything that needs something to soak up the sauce.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Perfect for dipping</span>
+            <a href="recipe-naan.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1591266123515-46149ea0b0a9?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade flour tortillas in a basket" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Bread</span>
+          <h3>Homemade Flour Tortillas</h3>
+          <p>Five ingredients and ten minutes — and they taste nothing like the ones from the bag. Soft, flexible, and so much better for tacos, wraps, and quesadillas.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Taco night essential</span>
+            <a href="recipe-flour-tortillas.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -193,7 +268,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍫</div>
+          <img src="https://images.unsplash.com/photo-1600239448128-917653c5bf77?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade chocolate syrup drizzled over ice cream" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Pantry</span>
@@ -208,7 +283,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍪</div>
+          <img src="https://images.unsplash.com/photo-1485745655111-3272a37e76a5?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Freshly baked chocolate chip cookies" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Sweets</span>
@@ -223,7 +298,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍫</div>
+          <img src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Fudgy homemade brownies" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Sweets</span>
@@ -232,6 +307,66 @@
           <div class="recipe-footer">
             <span class="harley-note">Gone in minutes</span>
             <a href="recipe-brownies.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1587271644393-eb2ae4d6bd44?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade chocolate fudge squares" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Sweets</span>
+          <h3>Homemade Fudge</h3>
+          <p>Rich, creamy, and melt-in-your-mouth good. I make a batch of this every holiday season and it never lasts more than a day. So easy and so worth it.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Holiday must-make</span>
+            <a href="recipe-fudge.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1763080348919-0a4969e31afc?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade rice krispie treat bars" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Sweets</span>
+          <h3>Rice Krispie Treats</h3>
+          <p>Three ingredients, ten minutes, zero effort — and my kids think I'm a genius every single time. Gooey, chewy, and made with real butter the way they're supposed to be.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Kids go crazy for these</span>
+            <a href="recipe-rice-krispie-treats.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1569762404472-026308ba6b64?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sliced homemade banana bread" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Sweets</span>
+          <h3>Banana Bread</h3>
+          <p>Moist, tender, and made with ripe bananas — this is my go-to for overripe bananas on the counter. The whole house smells amazing while it bakes and it's gone by afternoon.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Best use of ripe bananas</span>
+            <a href="recipe-banana-bread.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1551198297-0a648941bd7b?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade whipped cream" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Sweets</span>
+          <h3>Homemade Whipped Cream</h3>
+          <p>Two ingredients and two minutes — and it tastes nothing like the stuff in the can. I put this on everything: pies, hot cocoa, pancakes, fresh fruit. Once you make it yourself you won't go back.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Goes on everything</span>
+            <a href="recipe-whipped-cream.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -246,7 +381,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍊</div>
+          <img src="https://images.unsplash.com/photo-1587015990127-424b954e38b5?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Fresh squeezed orange juice in a jar" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Drinks</span>
@@ -261,7 +396,7 @@
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <div class="img-icon">🍝</div>
+          <img src="https://images.unsplash.com/photo-1465911817134-741b5e473a1b?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Handmade ravioli pasta" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Dinner</span>
@@ -270,6 +405,96 @@
           <div class="recipe-footer">
             <span class="harley-note">Special occasion dinner</span>
             <a href="recipe-ravioli.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1633436375153-d7045cb93e38?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Rich beef gravy over mashed potatoes" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">From Scratch</span>
+          <h3>Homemade Beef Gravy</h3>
+          <p>Rich, savory, and made from real drippings — not a packet. This is the gravy I pour over everything: mashed potatoes, biscuits, roast. Once you taste it you won't go back.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Pour it on everything</span>
+            <a href="recipe-beef-gravy.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1651836170595-4b0e7cba3952?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade chicken broth in a pot" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">From Scratch</span>
+          <h3>Homemade Chicken Broth</h3>
+          <p>Made from the leftover carcass with real vegetables and herbs — this is liquid gold. I freeze it in batches and use it in everything. So much better than anything from a carton.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Liquid gold</span>
+            <a href="recipe-chicken-broth.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1751151497799-8b4057a2638e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade marinara pasta sauce" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">From Scratch</span>
+          <h3>Homemade Pasta Sauce</h3>
+          <p>Real tomatoes, garlic, and fresh basil — simmered low and slow until it's thick and incredible. This sauce makes everything taste like it came from a real Italian kitchen.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Better than any jar</span>
+            <a href="recipe-pasta-sauce.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1748706203380-5652676433e0?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade ranch dressing over salad" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">From Scratch</span>
+          <h3>Homemade Ranch Dressing</h3>
+          <p>Creamy, herby, and made with real ingredients — not a powder packet. My family puts this on everything and I love that I know exactly what's in it. Way better than the bottle.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">On everything in this house</span>
+            <a href="recipe-ranch-dressing.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1688248839500-a47ea459b2a4?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Creamy homemade mac and cheese" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">From Scratch</span>
+          <h3>Homemade Mac &amp; Cheese</h3>
+          <p>Real cheese sauce, real pasta — no powder, no shortcuts. This is the comfort food my kids ask for by name and I never feel guilty making it because I know what's in it.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">True comfort food</span>
+            <a href="recipe-mac-and-cheese.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1633046993096-af7d74b12deb?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Homemade fresh salsa ingredients" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">From Scratch</span>
+          <h3>Homemade Fresh Salsa</h3>
+          <p>Fresh tomatoes, cilantro, lime, and jalapeño — made in minutes and so much better than anything from a jar. I make a big batch on taco night and it disappears before dinner's over.</p>
+          <div class="recipe-footer">
+            <span class="harley-note">Taco night staple</span>
+            <a href="recipe-salsa.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -289,5 +514,3 @@
 
 </body>
 </html>
-
-
