@@ -6,45 +6,61 @@
   <title>Fresh Juice Recipes — Naturally With Harley</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--cream:#D8E8C8;--beige:#BAD4A0;--terra:#14420A;--terra-dark:#0A2904;--brown:#060E03;--brown-mid:#162810;--brown-light:#B8782A;--white:#EAF2E2;--yellow:#F5C518;--yellow-dark:#D4A800;--shadow:rgba(24,46,12,.14)}
     html{scroll-behavior:smooth}
-    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:#FFD700;line-height:1.8}
+    body{font-family:'Lato',sans-serif;font-weight:400;background:var(--cream);color:var(--brown);line-height:1.8}
     a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
     nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:3px solid var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;box-shadow:0 2px 12px var(--shadow)}
     .nav-logo{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--terra);border-bottom:2.5px solid var(--yellow);padding-bottom:2px}
-    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFD700;transition:color .2s}
-    .post-hero{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:5rem 2rem 4rem}
-    .post-hero .cat{display:inline-block;background:var(--yellow);color:var(--terra);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .85rem;border-radius:2px;margin-bottom:1.25rem}
-    .post-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);line-height:1.25;max-width:720px;margin:0 auto 1rem}
-    .post-hero .meta{font-size:.85rem;opacity:.65}
-    .post-hero .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1rem auto 0}
-    .post-body{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:4rem 2rem 5rem}
-    .post-body p{font-size:1.05rem;color:#FFD700;margin-bottom:1.5rem}
-    .post-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#FFD700;margin:3rem 0 .75rem;padding-top:1rem}
-    .post-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#FFD700;margin:1.5rem 0 .5rem}
+    .nav-back{font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);transition:color .2s}
+    .nav-back:hover{color:var(--terra)}
+    .page-hero{position:relative;z-index:1;background:var(--terra);color:var(--white);text-align:center;padding:5rem 2rem 4rem}
+    .page-hero .eyebrow{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--yellow-dark);margin-bottom:.5rem}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;max-width:700px;margin:0 auto 1rem}
+    .page-hero p{max-width:580px;margin:0 auto;opacity:.85;font-size:1.05rem}
+    .page-hero .divider{width:60px;height:3px;background:var(--yellow);border-radius:2px;margin:1.25rem auto 0}
+    .hero-img{position:relative;z-index:1;max-height:400px;overflow:hidden}
+    .hero-img img{width:100%;height:400px;object-fit:cover;object-position:center}
+    .intro-strip{position:relative;z-index:1;background:var(--white);padding:3rem 2rem;text-align:center}
+    .intro-strip p{max-width:680px;margin:0 auto;font-size:1.05rem;color:var(--brown-mid)}
+    .cards-section{position:relative;z-index:1;padding:4rem 2rem}
+    .recipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.75rem;max-width:1100px;margin:0 auto}
+    .recipe-card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+    .recipe-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
+    .recipe-img{width:100%;padding-bottom:62%;position:relative;overflow:hidden;background:var(--beige)}
+    .recipe-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .recipe-card:hover .recipe-img img{transform:scale(1.05)}
+    .recipe-body{padding:1.25rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
+    .recipe-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);padding:.2rem .7rem;background:var(--yellow);border-radius:2px;margin-bottom:.5rem}
+    .recipe-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--brown);margin:.3rem 0 .5rem;line-height:1.35}
+    .recipe-body p{font-size:.9rem;color:var(--brown-mid);flex:1}
+    .recipe-footer{display:flex;align-items:center;justify-content:flex-end;margin-top:1.1rem}
+    .recipe-btn{display:inline-block;padding:.5rem 1.1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:background .2s}
+    .recipe-btn:hover{background:var(--terra-dark)}
+    .recipes-below{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+    .juice-section{border-top:2px solid var(--beige);padding-top:2.5rem;margin-top:2.5rem}
+    .juice-section:first-child{border-top:none;padding-top:0}
+    .benefit-tag{display:inline-block;background:var(--terra);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .75rem;border-radius:2px;margin-bottom:.75rem}
+    .juice-section h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--brown);margin-bottom:.75rem}
+    .juice-section p{font-size:1.05rem;color:var(--brown-mid);margin-bottom:1.25rem}
     .recipe-box{background:#fff;border-left:4px solid var(--yellow);border-radius:0 6px 6px 0;padding:1.5rem 1.75rem;margin:1.25rem 0;box-shadow:0 2px 12px var(--shadow)}
     .recipe-box h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--brown-light);margin-bottom:.75rem}
-    .recipe-box p,.recipe-box li{font-size:.95rem;color:var(--brown-mid);margin-bottom:.4rem}
+    .recipe-box li{font-size:.95rem;color:var(--brown-mid);margin-bottom:.4rem}
     .recipe-box ul,.recipe-box ol{padding-left:1.25rem}
     .recipe-box ol li{margin-bottom:.6rem;color:var(--brown-mid)}
     .tip-box{background:var(--beige);border-left:4px solid var(--terra);border-radius:0 6px 6px 0;padding:1.25rem 1.5rem;margin:1.25rem 0}
     .tip-box p{margin:0;font-size:.95rem;color:var(--brown-mid)}
-    .benefit-tag{display:inline-block;background:var(--terra);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .75rem;border-radius:2px;margin-bottom:.75rem}
-    .juice-section{border-top:2px solid var(--beige);padding-top:2.5rem;margin-top:2.5rem}
-    .post-img{position:relative;z-index:1;max-height:480px;overflow:hidden}
-    .post-img img{width:100%;height:480px;object-fit:cover;object-position:center}
-    .toc{background:#fff;border-left:4px solid var(--yellow);border-radius:0 6px 6px 0;padding:1.5rem 1.75rem;margin:2rem 0;box-shadow:0 2px 12px var(--shadow)}
-    .toc h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--brown-light);margin-bottom:.75rem}
-    .toc ul{padding-left:1.25rem}
-    .toc li{margin-bottom:.35rem}
-    .toc a{color:var(--terra);font-size:.9rem;font-weight:700;border-bottom:1px solid var(--yellow)}
-    .back-link{display:inline-block;margin-top:2rem;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFD700;border-bottom:1.5px solid var(--yellow)}
-    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2rem;font-size:.85rem}
+    .back-strip{position:relative;z-index:1;background:var(--cream);padding:2.5rem 2rem;text-align:center}
+    .back-link{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);border-bottom:1.5px solid var(--yellow)}
+    .back-link:hover{color:var(--terra)}
+    footer{position:relative;z-index:1;background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:2.5rem 2rem;font-size:.85rem}
     .footer-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:#fff;margin-bottom:.4rem}
     footer a{color:rgba(255,255,255,.6)}
+    footer a:hover{color:#fff}
   </style>
   <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','2537493');</script>
 </head>
@@ -54,32 +70,142 @@
     <a href="index.html" class="nav-logo">Naturally With Harley</a>
     <a href="homemade.html" class="nav-back">&#8592; Homemade Recipes</a>
   </nav>
-  <div class="post-hero">
-    <span class="cat">Fresh Juice</span>
+
+  <div class="page-hero">
+    <p class="eyebrow">Fresh &amp; From Scratch</p>
     <h1>Juice Recipes for Every Goal</h1>
-    <p class="meta">By Harley &nbsp;&middot;&nbsp; From My Kitchen</p>
+    <p>Real fruit, real vegetables, no added sugar. Pick the one your body needs today.</p>
     <div class="divider"></div>
   </div>
-  <div class="post-img"><img src="images/recipe-juice.jpg" alt="Fresh homemade juice" /></div>
-  <div class="post-body">
-    <p>These are the juices I actually make — not fancy, not complicated, just real fruit and vegetables doing what they're supposed to do. I've got one for immunity, one for weight loss, one for glowing skin, one for eye health, and a few more. Pick based on what your body needs today.</p>
-    <p>No juicer? No problem. Every recipe below includes a blender method too.</p>
 
-    <div class="toc">
-      <h3>Jump to a Recipe</h3>
-      <ul>
-        <li><a href="#everyday">Everyday Blend — Orange, Apple &amp; Ginger</a></li>
-        <li><a href="#immune">Immune Boost — Cold Crusher</a></li>
-        <li><a href="#weightloss">Weight Loss — Green Flush</a></li>
-        <li><a href="#skin">Skin Glow — Carrot &amp; Orange</a></li>
-        <li><a href="#eyes">Eye Health — Carrot &amp; Beet</a></li>
-        <li><a href="#energy">Energy — Sunrise Beet Juice</a></li>
-        <li><a href="#antiinflam">Anti-Inflammatory — Golden Healer</a></li>
-        <li><a href="#digestion">Digestion — Belly Soother</a></li>
-      </ul>
+  <div class="hero-img"><img src="images/recipe-juice.jpg" alt="Fresh homemade juice" /></div>
+
+  <div class="intro-strip">
+    <p>Store-bought juice is basically sugar water with a fruit label on it. These are the juices I actually make — each one has a purpose. No juicer? Every recipe includes a blender method too.</p>
+  </div>
+
+  <!-- RECIPE CARDS GRID -->
+  <div class="cards-section">
+    <div class="recipe-grid">
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1646583920526-27d09808bc6a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Glass of orange juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Everyday</span>
+          <h3>Everyday Blend</h3>
+          <p>Orange, apple, and fresh ginger. Sweet, zingy, and the one my family asks for most.</p>
+          <div class="recipe-footer">
+            <a href="#everyday" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1530064161350-7824b8cdeee9?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Citrus immune boost juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Immune System</span>
+          <h3>Cold Crusher</h3>
+          <p>Citrus, ginger, turmeric, and cayenne. This is what I make the second I feel something coming on.</p>
+          <div class="recipe-footer">
+            <a href="#immune" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1610622930069-177b599953eb?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Green detox juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Weight Loss</span>
+          <h3>Green Flush</h3>
+          <p>Cucumber, celery, spinach, apple, lemon, ginger. Clean and light — I have this in the morning when I'm trying to stay on track.</p>
+          <div class="recipe-footer">
+            <a href="#weightloss" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1528556860752-2a6a19a285a3?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Carrot orange glow juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Skin</span>
+          <h3>Glow Juice</h3>
+          <p>Carrot, orange, turmeric, lemon. Loaded with beta-carotene and Vitamin C for clear glowing skin.</p>
+          <div class="recipe-footer">
+            <a href="#skin" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1602533438339-bcce6574218b?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Purple beet eye health juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Eye Health</span>
+          <h3>Eye Brightener</h3>
+          <p>Carrot, beet, orange, cucumber. Deep purple color, packed with nutrients for eye health.</p>
+          <div class="recipe-footer">
+            <a href="#eyes" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1559159266-17d182ec7c24?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Beet energy juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Energy</span>
+          <h3>Sunrise Beet Juice</h3>
+          <p>Beet, apple, ginger, lemon. Slow and steady natural energy — no spike, no crash.</p>
+          <div class="recipe-footer">
+            <a href="#energy" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1622119745123-96bbf01909c0?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Golden turmeric anti-inflammatory juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Anti-Inflammatory</span>
+          <h3>Golden Healer</h3>
+          <p>Pineapple, turmeric, ginger, lemon. Tropical and bright — tastes nothing like medicine even though it kind of is.</p>
+          <div class="recipe-footer">
+            <a href="#antiinflam" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card">
+        <div class="recipe-img">
+          <img src="https://images.unsplash.com/photo-1759524323778-436094781e5b?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Green mint digestion juice" />
+        </div>
+        <div class="recipe-body">
+          <span class="recipe-tag">Digestion</span>
+          <h3>Belly Soother</h3>
+          <p>Apple, cucumber, ginger, lemon, mint. My go-to after a heavy meal or when my stomach is off.</p>
+          <div class="recipe-footer">
+            <a href="#digestion" class="recipe-btn">Get Recipe →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
-    <!-- Everyday Blend -->
+  <!-- FULL RECIPES -->
+  <div class="recipes-below">
+
     <div class="juice-section" id="everyday">
       <span class="benefit-tag">Everyday</span>
       <h2>Everyday Blend</h2>
@@ -116,11 +242,10 @@
       </div>
     </div>
 
-    <!-- Immune Boost -->
     <div class="juice-section" id="immune">
       <span class="benefit-tag">Immune System</span>
       <h2>Cold Crusher — Immune Boost Juice</h2>
-      <p>This is what I make the second I feel something coming on. Citrus, ginger, turmeric, and a tiny bit of cayenne — it's sharp, it's strong, and it works. I swear by this juice every cold season. Even my kids ask for it now.</p>
+      <p>This is what I make the second I feel something coming on. Citrus, ginger, turmeric, and a tiny bit of cayenne — it's sharp, it's strong, and it works. I swear by this juice every cold season.</p>
       <div class="recipe-box">
         <h3>What You Need — Makes about 1½ cups</h3>
         <ul>
@@ -150,15 +275,14 @@
         </ol>
       </div>
       <div class="tip-box">
-        <p><strong>Harley's tip:</strong> This one is strong — almost like a shot. If it's too intense, add a couple of apples to the mix to sweeten it up. The benefits are the same.</p>
+        <p><strong>Harley's tip:</strong> This one is strong — almost like a shot. If it's too intense, add a couple of apples to sweeten it up. The benefits are the same.</p>
       </div>
     </div>
 
-    <!-- Weight Loss -->
     <div class="juice-section" id="weightloss">
       <span class="benefit-tag">Weight Loss</span>
       <h2>Green Flush — Weight Loss Juice</h2>
-      <p>This one is not sweet — it's clean and green and it fills you up without the calories. Cucumber and celery are mostly water, which helps flush your system. The apple adds just enough sweetness to make it drinkable. I have this in the morning when I'm trying to stay on track.</p>
+      <p>This one is not sweet — it's clean and green and it fills you up without the calories. Cucumber and celery flush your system. The apple adds just enough sweetness to make it drinkable. I have this in the morning when I'm trying to stay on track.</p>
       <div class="recipe-box">
         <h3>What You Need — Makes about 2 cups</h3>
         <ul>
@@ -181,7 +305,7 @@
         <h3>No Juicer? Blender Method:</h3>
         <ol>
           <li>Blend everything with ½ cup of water on high until completely smooth.</li>
-          <li>Strain through a fine mesh strainer, pressing to get all the liquid out.</li>
+          <li>Strain through a fine mesh strainer, pressing down to get all the liquid out.</li>
           <li>Drink immediately — does not store well.</li>
         </ol>
       </div>
@@ -190,11 +314,10 @@
       </div>
     </div>
 
-    <!-- Skin -->
     <div class="juice-section" id="skin">
       <span class="benefit-tag">Skin</span>
       <h2>Glow Juice — Skin Juice</h2>
-      <p>Carrots are loaded with beta-carotene, which your body turns into Vitamin A — one of the best nutrients for clear, glowing skin. Add orange for Vitamin C, turmeric for inflammation, and lemon to brighten. This one turns out the most beautiful color and I honestly could drink it every day.</p>
+      <p>Carrots are loaded with beta-carotene, which your body turns into Vitamin A — one of the best nutrients for clear glowing skin. Add orange for Vitamin C, turmeric for inflammation, and lemon to brighten. This one turns out the most beautiful color and I honestly could drink it every day.</p>
       <div class="recipe-box">
         <h3>What You Need — Makes about 1½ cups</h3>
         <ul>
@@ -226,11 +349,10 @@
       </div>
     </div>
 
-    <!-- Eye Health -->
     <div class="juice-section" id="eyes">
       <span class="benefit-tag">Eye Health</span>
       <h2>Eye Brightener — Eye Health Juice</h2>
-      <p>Carrots and beets are both packed with nutrients that support eye health — Vitamin A from carrots and antioxidants from beets. Combined with orange for Vitamin C and cucumber to dilute the earthy flavor, this is surprisingly good for how healthy it is. It has a deep reddish-purple color that looks amazing in a glass.</p>
+      <p>Carrots and beets are both packed with nutrients that support eye health — Vitamin A from carrots and antioxidants from beets. Combined with orange and cucumber to balance the earthy flavor, this is surprisingly good for how healthy it is.</p>
       <div class="recipe-box">
         <h3>What You Need — Makes about 1½ cups</h3>
         <ul>
@@ -258,15 +380,14 @@
         </ol>
       </div>
       <div class="tip-box">
-        <p><strong>Harley's tip:</strong> Beets stain just like turmeric — use a cloth napkin or paper towels when straining. And yes, this will turn things pink. That's how you know it's working.</p>
+        <p><strong>Harley's tip:</strong> Beets stain just like turmeric. And yes, this will turn things pink. That's how you know it's working.</p>
       </div>
     </div>
 
-    <!-- Energy -->
     <div class="juice-section" id="energy">
       <span class="benefit-tag">Energy</span>
       <h2>Sunrise Beet Juice — Natural Energy</h2>
-      <p>Beets contain natural nitrates that actually improve blood flow and oxygen delivery — which is why athletes drink beet juice before workouts. I'm not an athlete but I do have three kids so the effect is the same. This one is earthy, a little sweet from the apple, and gives you a real lift without the crash.</p>
+      <p>Beets contain natural nitrates that improve blood flow and oxygen delivery — which is why athletes drink beet juice before workouts. I'm not an athlete but I do have three kids so the effect is the same. Earthy, a little sweet from the apple, and gives you a real lift without the crash.</p>
       <div class="recipe-box">
         <h3>What You Need — Makes about 1½ cups</h3>
         <ul>
@@ -298,7 +419,6 @@
       </div>
     </div>
 
-    <!-- Anti-Inflammatory -->
     <div class="juice-section" id="antiinflam">
       <span class="benefit-tag">Anti-Inflammatory</span>
       <h2>Golden Healer — Anti-Inflammatory Juice</h2>
@@ -334,11 +454,10 @@
       </div>
     </div>
 
-    <!-- Digestion -->
     <div class="juice-section" id="digestion">
       <span class="benefit-tag">Digestion</span>
       <h2>Belly Soother — Digestion Juice</h2>
-      <p>Ginger and mint are both classic digestive aids — they calm bloating, ease nausea, and help your gut do its job. Apple and cucumber make it light and refreshing, and the lemon brightens everything up. This is my go-to after a heavy meal or when my stomach is just off.</p>
+      <p>Ginger and mint are both classic digestive aids — they calm bloating, ease nausea, and help your gut do its job. Apple and cucumber make it light and refreshing. This is my go-to after a heavy meal or when my stomach is just off.</p>
       <div class="recipe-box">
         <h3>What You Need — Makes about 1½ cups</h3>
         <ul>
@@ -370,8 +489,12 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="back-strip">
     <a href="homemade.html" class="back-link">&#8592; Back to Homemade Recipes</a>
   </div>
+
   <footer>
     <div class="footer-logo">Naturally With Harley</div>
     <p>&copy; 2026 Naturally With Harley &middot; <a href="index.html">Home</a></p>
