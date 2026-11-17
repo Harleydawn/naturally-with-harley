@@ -27,7 +27,7 @@
     .hero-img img{width:100%;height:400px;object-fit:cover;object-position:center}
     .intro-strip{position:relative;z-index:1;background:var(--white);padding:3rem 2rem;text-align:center}
     .intro-strip p{max-width:680px;margin:0 auto;font-size:1.05rem;color:var(--brown-mid)}
-    .cards-section{position:relative;z-index:1;padding:4rem 2rem}
+    .cat-section{position:relative;z-index:1;padding:4rem 2rem}
     .recipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.75rem;max-width:1100px;margin:0 auto}
     .recipe-card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:1px solid rgba(184,120,42,.2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
     .recipe-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow);outline:2px solid var(--yellow)}
@@ -39,21 +39,8 @@
     .recipe-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--brown);margin:.3rem 0 .5rem;line-height:1.35}
     .recipe-body p{font-size:.9rem;color:var(--brown-mid);flex:1}
     .recipe-footer{display:flex;align-items:center;justify-content:flex-end;margin-top:1.1rem}
-    .recipe-btn{display:inline-block;padding:.5rem 1.1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:background .2s}
-    .recipe-btn:hover{background:var(--terra-dark)}
-    .recipes-below{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
-    .juice-section{border-top:2px solid var(--beige);padding-top:2.5rem;margin-top:2.5rem}
-    .juice-section:first-child{border-top:none;padding-top:0}
-    .benefit-tag{display:inline-block;background:var(--terra);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .75rem;border-radius:2px;margin-bottom:.75rem}
-    .juice-section h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--brown);margin-bottom:.75rem}
-    .juice-section p{font-size:1.05rem;color:var(--brown-mid);margin-bottom:1.25rem}
-    .recipe-box{background:#fff;border-left:4px solid var(--yellow);border-radius:0 6px 6px 0;padding:1.5rem 1.75rem;margin:1.25rem 0;box-shadow:0 2px 12px var(--shadow)}
-    .recipe-box h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--brown-light);margin-bottom:.75rem}
-    .recipe-box li{font-size:.95rem;color:var(--brown-mid);margin-bottom:.4rem}
-    .recipe-box ul,.recipe-box ol{padding-left:1.25rem}
-    .recipe-box ol li{margin-bottom:.6rem;color:var(--brown-mid)}
-    .tip-box{background:var(--beige);border-left:4px solid var(--terra);border-radius:0 6px 6px 0;padding:1.25rem 1.5rem;margin:1.25rem 0}
-    .tip-box p{margin:0;font-size:.95rem;color:var(--brown-mid)}
+    .coming-btn{display:inline-block;padding:.5rem 1.1rem;background:var(--terra);color:var(--white);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:background .2s}
+    .coming-btn:hover{background:var(--terra-dark)}
     .back-strip{position:relative;z-index:1;background:var(--cream);padding:2.5rem 2rem;text-align:center}
     .back-link{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-mid);border-bottom:1.5px solid var(--yellow)}
     .back-link:hover{color:var(--terra)}
@@ -72,8 +59,8 @@
   </nav>
 
   <div class="page-hero">
-    <p class="eyebrow">Fresh &amp; From Scratch</p>
-    <h1>Juice Recipes for Every Goal</h1>
+    <p class="eyebrow">From My Kitchen</p>
+    <h1>Fresh Juice Recipes</h1>
     <p>Real fruit, real vegetables, no added sugar. Pick the one your body needs today.</p>
     <div class="divider"></div>
   </div>
@@ -84,20 +71,19 @@
     <p>Store-bought juice is basically sugar water with a fruit label on it. These are the juices I actually make — each one has a purpose. No juicer? Every recipe includes a blender method too.</p>
   </div>
 
-  <!-- RECIPE CARDS GRID -->
-  <div class="cards-section">
+  <div class="cat-section">
     <div class="recipe-grid">
 
       <div class="recipe-card">
         <div class="recipe-img">
-          <img src="https://images.unsplash.com/photo-1646583920526-27d09808bc6a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Glass of orange juice" />
+          <img src="https://images.unsplash.com/photo-1646583920526-27d09808bc6a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Glass of fresh orange juice" />
         </div>
         <div class="recipe-body">
           <span class="recipe-tag">Everyday</span>
           <h3>Everyday Blend</h3>
           <p>Orange, apple, and fresh ginger. Sweet, zingy, and the one my family asks for most.</p>
           <div class="recipe-footer">
-            <a href="#everyday" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-everyday.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -111,7 +97,7 @@
           <h3>Cold Crusher</h3>
           <p>Citrus, ginger, turmeric, and cayenne. This is what I make the second I feel something coming on.</p>
           <div class="recipe-footer">
-            <a href="#immune" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-immune.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -125,7 +111,7 @@
           <h3>Green Flush</h3>
           <p>Cucumber, celery, spinach, apple, lemon, ginger. Clean and light — I have this in the morning when I'm trying to stay on track.</p>
           <div class="recipe-footer">
-            <a href="#weightloss" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-weightloss.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -139,7 +125,7 @@
           <h3>Glow Juice</h3>
           <p>Carrot, orange, turmeric, lemon. Loaded with beta-carotene and Vitamin C for clear glowing skin.</p>
           <div class="recipe-footer">
-            <a href="#skin" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-skin.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -153,7 +139,7 @@
           <h3>Eye Brightener</h3>
           <p>Carrot, beet, orange, cucumber. Deep purple color, packed with nutrients for eye health.</p>
           <div class="recipe-footer">
-            <a href="#eyes" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-eyes.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -167,7 +153,7 @@
           <h3>Sunrise Beet Juice</h3>
           <p>Beet, apple, ginger, lemon. Slow and steady natural energy — no spike, no crash.</p>
           <div class="recipe-footer">
-            <a href="#energy" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-energy.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -181,7 +167,7 @@
           <h3>Golden Healer</h3>
           <p>Pineapple, turmeric, ginger, lemon. Tropical and bright — tastes nothing like medicine even though it kind of is.</p>
           <div class="recipe-footer">
-            <a href="#antiinflam" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-antiinflam.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
@@ -195,300 +181,12 @@
           <h3>Belly Soother</h3>
           <p>Apple, cucumber, ginger, lemon, mint. My go-to after a heavy meal or when my stomach is off.</p>
           <div class="recipe-footer">
-            <a href="#digestion" class="recipe-btn">Get Recipe →</a>
+            <a href="recipe-juice-digestion.html" class="coming-btn" style="opacity:1;cursor:pointer;">Read Recipe →</a>
           </div>
         </div>
       </div>
 
     </div>
-  </div>
-
-  <!-- FULL RECIPES -->
-  <div class="recipes-below">
-
-    <div class="juice-section" id="everyday">
-      <span class="benefit-tag">Everyday</span>
-      <h2>Everyday Blend</h2>
-      <p>Orange, apple, and fresh ginger. This is my everyday juice — the one I make most and the one everyone asks for. Sweet, a little zingy, and it makes the whole kitchen smell amazing.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 2 cups</h3>
-        <ul>
-          <li>6 navel oranges, peeled</li>
-          <li>3 medium apples, cored</li>
-          <li>1 inch fresh ginger (optional but so good)</li>
-          <li>Pinch of salt</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Peel the oranges and core the apples.</li>
-          <li>Run everything through your juicer — oranges, apples, and ginger.</li>
-          <li>Add a tiny pinch of salt and stir. It brings out the sweetness.</li>
-          <li>Pour over ice and serve, or store in a sealed jar in the fridge for up to 3 days.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Peel the oranges, removing as much white pith as you can. Roughly chop the apples.</li>
-          <li>Blend everything on high with ½ cup of water until completely smooth.</li>
-          <li>Strain through a fine mesh strainer or cheesecloth into a pitcher.</li>
-          <li>Add a pinch of salt, stir, serve over ice.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> Room temperature fruit gives way more juice than cold fruit. Let your oranges sit out for 30 minutes before juicing — you'll notice the difference.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="immune">
-      <span class="benefit-tag">Immune System</span>
-      <h2>Cold Crusher — Immune Boost Juice</h2>
-      <p>This is what I make the second I feel something coming on. Citrus, ginger, turmeric, and a tiny bit of cayenne — it's sharp, it's strong, and it works. I swear by this juice every cold season.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 1½ cups</h3>
-        <ul>
-          <li>3 navel oranges, peeled</li>
-          <li>1 grapefruit, peeled</li>
-          <li>1 lemon, peeled</li>
-          <li>2 inches fresh ginger</li>
-          <li>1 inch fresh turmeric (or ½ tsp ground)</li>
-          <li>Tiny pinch of cayenne pepper</li>
-          <li>Pinch of black pepper (helps your body absorb the turmeric)</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Run the oranges, grapefruit, lemon, ginger, and turmeric through the juicer.</li>
-          <li>Stir in the cayenne and black pepper.</li>
-          <li>Drink immediately or store in a sealed jar in the fridge for up to 2 days.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Blend all fruit and ginger with ¼ cup water on high until smooth.</li>
-          <li>Strain well through a fine mesh strainer.</li>
-          <li>Stir in cayenne and black pepper. Serve immediately.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> This one is strong — almost like a shot. If it's too intense, add a couple of apples to sweeten it up. The benefits are the same.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="weightloss">
-      <span class="benefit-tag">Weight Loss</span>
-      <h2>Green Flush — Weight Loss Juice</h2>
-      <p>This one is not sweet — it's clean and green and it fills you up without the calories. Cucumber and celery flush your system. The apple adds just enough sweetness to make it drinkable. I have this in the morning when I'm trying to stay on track.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 2 cups</h3>
-        <ul>
-          <li>1 large cucumber</li>
-          <li>3 stalks celery</li>
-          <li>2 green apples, cored</li>
-          <li>2 large handfuls fresh spinach</li>
-          <li>1 lemon, peeled</li>
-          <li>1 inch fresh ginger</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Run everything through the juicer — cucumber, celery, apples, spinach, lemon, ginger.</li>
-          <li>Stir well and serve over ice right away. Green juice oxidizes fast so drink it fresh.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Blend everything with ½ cup of water on high until completely smooth.</li>
-          <li>Strain through a fine mesh strainer, pressing down to get all the liquid out.</li>
-          <li>Drink immediately — does not store well.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> Drink this on an empty stomach first thing in the morning for best results. It jumpstarts your digestion and keeps you full enough that you don't need a heavy breakfast.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="skin">
-      <span class="benefit-tag">Skin</span>
-      <h2>Glow Juice — Skin Juice</h2>
-      <p>Carrots are loaded with beta-carotene, which your body turns into Vitamin A — one of the best nutrients for clear glowing skin. Add orange for Vitamin C, turmeric for inflammation, and lemon to brighten. This one turns out the most beautiful color and I honestly could drink it every day.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 1½ cups</h3>
-        <ul>
-          <li>6 medium carrots, scrubbed</li>
-          <li>2 navel oranges, peeled</li>
-          <li>1 lemon, peeled</li>
-          <li>1 inch fresh turmeric (or ½ tsp ground)</li>
-          <li>½ inch fresh ginger</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Scrub the carrots — no need to peel them.</li>
-          <li>Run everything through the juicer.</li>
-          <li>Stir and serve over ice. Store in the fridge up to 2 days.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Roughly chop the carrots and blend with ½ cup water on high for 1–2 minutes.</li>
-          <li>Add oranges, lemon, turmeric, and ginger and blend again until smooth.</li>
-          <li>Strain well through a fine mesh strainer.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> Turmeric stains everything — use a glass you don't mind getting orange. Stainless steel straws are your friend here too.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="eyes">
-      <span class="benefit-tag">Eye Health</span>
-      <h2>Eye Brightener — Eye Health Juice</h2>
-      <p>Carrots and beets are both packed with nutrients that support eye health — Vitamin A from carrots and antioxidants from beets. Combined with orange and cucumber to balance the earthy flavor, this is surprisingly good for how healthy it is.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 1½ cups</h3>
-        <ul>
-          <li>4 medium carrots, scrubbed</li>
-          <li>1 medium beet, scrubbed and roughly chopped</li>
-          <li>1 orange, peeled</li>
-          <li>½ large cucumber</li>
-          <li>½ inch fresh ginger</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Scrub the carrots and beet — no need to peel either.</li>
-          <li>Run everything through the juicer.</li>
-          <li>Stir and serve immediately or store up to 2 days in a sealed jar.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Chop beet and carrots into small chunks. Blend with ½ cup water until smooth.</li>
-          <li>Add orange, cucumber, and ginger and blend again.</li>
-          <li>Strain thoroughly through a fine mesh strainer.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> Beets stain just like turmeric. And yes, this will turn things pink. That's how you know it's working.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="energy">
-      <span class="benefit-tag">Energy</span>
-      <h2>Sunrise Beet Juice — Natural Energy</h2>
-      <p>Beets contain natural nitrates that improve blood flow and oxygen delivery — which is why athletes drink beet juice before workouts. I'm not an athlete but I do have three kids so the effect is the same. Earthy, a little sweet from the apple, and gives you a real lift without the crash.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 1½ cups</h3>
-        <ul>
-          <li>2 medium beets, scrubbed</li>
-          <li>2 apples, cored</li>
-          <li>1 inch fresh ginger</li>
-          <li>½ lemon, peeled</li>
-          <li>2 stalks celery</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Scrub the beets — no need to peel.</li>
-          <li>Run everything through the juicer.</li>
-          <li>Stir and serve over ice.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Chop beets and apples. Blend with ½ cup water on high until smooth.</li>
-          <li>Add ginger, lemon, and celery and blend again.</li>
-          <li>Strain well through a fine mesh strainer.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> Drink this 30–60 minutes before a workout or a busy morning. The energy is slow and steady — not a spike and crash like caffeine.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="antiinflam">
-      <span class="benefit-tag">Anti-Inflammatory</span>
-      <h2>Golden Healer — Anti-Inflammatory Juice</h2>
-      <p>Pineapple has bromelain, an enzyme that actively reduces inflammation. Turmeric and ginger double down on that. This one is tropical and bright and tastes nothing like medicine even though it kind of is medicine. I make this after a stressful week or when my joints are achy.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 2 cups</h3>
-        <ul>
-          <li>2 cups fresh pineapple chunks</li>
-          <li>1 inch fresh turmeric (or ½ tsp ground)</li>
-          <li>1 inch fresh ginger</li>
-          <li>1 lemon, peeled</li>
-          <li>1 orange, peeled</li>
-          <li>Pinch of black pepper</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Run the pineapple, turmeric, ginger, lemon, and orange through the juicer.</li>
-          <li>Stir in the black pepper. Serve immediately.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Blend all ingredients on high until smooth.</li>
-          <li>Strain through a fine mesh strainer.</li>
-          <li>Stir in black pepper and drink fresh.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> The black pepper is not optional — it increases how much turmeric your body absorbs by up to 2000%. You will not taste it. Just add it.</p>
-      </div>
-    </div>
-
-    <div class="juice-section" id="digestion">
-      <span class="benefit-tag">Digestion</span>
-      <h2>Belly Soother — Digestion Juice</h2>
-      <p>Ginger and mint are both classic digestive aids — they calm bloating, ease nausea, and help your gut do its job. Apple and cucumber make it light and refreshing. This is my go-to after a heavy meal or when my stomach is just off.</p>
-      <div class="recipe-box">
-        <h3>What You Need — Makes about 1½ cups</h3>
-        <ul>
-          <li>2 green apples, cored</li>
-          <li>1 cucumber</li>
-          <li>1 inch fresh ginger</li>
-          <li>1 lemon, peeled</li>
-          <li>1 large handful fresh mint leaves</li>
-        </ul>
-      </div>
-      <div class="recipe-box">
-        <h3>How to Make It — Juicer:</h3>
-        <ol>
-          <li>Run the apples, cucumber, ginger, and lemon through the juicer.</li>
-          <li>Add the mint leaves last — most juicers handle herbs fine.</li>
-          <li>Stir and serve over ice. Best drunk fresh.</li>
-        </ol>
-      </div>
-      <div class="recipe-box">
-        <h3>No Juicer? Blender Method:</h3>
-        <ol>
-          <li>Blend apples, cucumber, ginger, lemon, and mint with ½ cup water on high.</li>
-          <li>Strain well through a fine mesh strainer, pressing down to get all the liquid.</li>
-          <li>Serve immediately over ice.</li>
-        </ol>
-      </div>
-      <div class="tip-box">
-        <p><strong>Harley's tip:</strong> This is also great mixed half-and-half with sparkling water if you want something a little more fun and fizzy after dinner.</p>
-      </div>
-    </div>
-
   </div>
 
   <div class="back-strip">
